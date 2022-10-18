@@ -1,0 +1,117 @@
+.collapsible {
+	background-color: #265A2A;
+	color: white;
+	cursor: pointer;
+	width: 80%;
+	min-width: 300px;
+	height: 50px;
+	min-height: 50px;
+	border: 1px solid #265A2A;
+	text-align: center;
+	font-size: 16px;
+	margin-left: 10%;
+}
+.collapsible:after {
+	content: '\002B'; /* adds + icons */
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 50px;
+	display: inline-block;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.active:after {
+	content: "\2212"; /* adds - icons */
+}
+
+.content {
+	text-align: center;
+	max-height: 0;
+	width: 80%;
+	min-width: 300px;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #282828;
+	margin: 0 auto;
+}
+
+.button { 	/* This is to make elements act like a button without using the <button> element because it cannot be a child element of <a> */
+	background-color: #999;
+	padding: 20px 20px;
+	color: #B9FFA9;
+	width: 90%;
+	min-width: 300px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	display: inline-block;    /* Remember to add inline-block. I've struggled for hours wondering why the buttons where out of place */
+	margin: 0px auto;
+}
+
+.button:hover {
+	background-color: #888;
+}
+
+.collapsible:hover {
+	background-color: #087C0B;
+}
+
+p, h1, h2 {
+	text-align: center;
+	min-width: 500px;
+	color: #9EFFAE;
+	text-shadow: 2px 5px 20px #214818;
+}
+
+#headerP {
+	font-size: 20px;
+}
+
+.img {
+    height: auto;
+    width: 80%;
+	padding: 0px 20px; 
+}
+
+img:hover {
+	border: 3px solid #08CF0D;
+}
+
+/*hovering over an image will make a text appear*/
+
+
+html {
+	background-image: url('bg.jpg'); 
+	background-repeat: repeat;
+	background-size: cover;
+	min-height: 1000px;
+	font-family: Verdana, sans-serif;
+}
+
+body {
+	margin: 0px;
+}
+
+#id {
+	margin:auto;
+	width: 90%;
+}
+
+.header {
+	padding: 50px;
+	text-align: center;
+	background: rgba(158, 255, 174, 0.3);
+	font-size: 30px;
+}
+
+.validators {
+	position: fixed;
+	width: auto;
+	height: auto;
+	bottom: 0;
+	left: 0;
+}

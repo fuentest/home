@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<meta charset="UTF-8">
+		<title>The Absurd Beauty of the Earth</title>
+
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>The Absurd Beauty of The Earth</h1>
+
+			<p id="headerP">Earth is a unique artist; many photographs say so. However, most of them consist of the usual mountains or saturated shores. Sure, they are pleasant to the eye, but other paintings of the Earth could use some extra attention. Here, you will see and learn about new, refreshing, otherworldly and absurd landscapes, the abstract artworks of the Earth.</p>
+			</div>
+			
+		<h1>Which Country Would You Like to Check Out?</h1>
+			
+		<div class="container">
+			<button class="collapsible">Chocolate hills, Philippines</button>
+			<div class="content">
+				<a href="Asia.html#ChocolateHills" class="button">View Chocolate Hills, Philippines</a>
+				<a href="Asia.html#ChocolateHills"><img  src="Img/chocind.jpg" class="img" alt="A photograph of a vast land with countless of tall hills."></a>
+			</div>
+
+			
+			<button type='button' Class="collapsible">Kawah Ijen Volcano, Indonesia</button>
+			<div class="content">
+				<a href="Asia.html#Ijenvolcano" class="button">View Kawah Ijen Volcano, Indonesia</a>
+				<a href="Asia.html#IjenVolcano"><img  src="Img/kawah2.jpg" class="img" alt="A photograph of a beautiful turquise lake on the sunsent with mountains and clouds on the background."></a>
+			</div>
+			
+
+			<button type='button' Class="collapsible">Socotra Island, Yemen</button>
+			<div class="content">
+				<a href="Asia.html#Socotra" class="button">View Socotra Island, Yemen</a>
+				<a href="Asia.html#Socotra" ><img  src="Img/Socotraind.jpg" alt="A photograph of many Dragon Blood trees uphill."></a>
+			</div>
+					
+
+			<button Class="collapsible">Zhangye Danxia Landform, China</button>
+			<div class="content">
+				<a href="Asia.html#Zhangye" class="button" >View Zhangye Danxia Landform, China</a>
+				<a href="Asia.html#Zhangye" ><img  src="Img/danxia1.jpg" class="img" alt="A photograph of colourful mountains with its colour streaks diagonal."></a>
+			</div>
+			
+
+			<button Class="collapsible">Zhangjiajie National Park, China</button>
+			<div class="content">
+				<a href="Asia.html#Zhangjiajie" class="button">View Zhangjiajie National Park, China</a>
+				<a href="Asia.html#Zhangjiajie"><img src="Img/zhangjiajieind.jpg" class="img" alt="A photograph of towering gray rocks with lush vegetation and fog."></a>
+			</div>
+		</div>
+		
+		<div class="validators">
+			<a href="https://validator.w3.org/nu/#textarea"><img src="Img/w3c.png" alt="HTML Validator"></a>
+			<a href=""><img src="Img/css.png" alt="CSS Validator"></a>
+		</div>
+		 
+		<script> <!-- Code for the collapsible buttons -->
+			<!-- Toggles collapse of a specific content -->
+			function toggleContent(content) {
+			  if (content.style.maxHeight) {
+				content.style.maxHeight = null;
+			  } else {
+				content.style.maxHeight = content.scrollHeight + 'px';
+			  }
+			}
+
+			<!-- collapses all content -->
+			function collapseAllOpenContent() {
+			  const colls = document.getElementsByClassName('collapsible');
+			  for (const coll of colls) {
+				if (coll.classList.contains('active')) {
+				  coll.classList.remove('active');
+				  toggleContent(coll.nextElementSibling);
+				}
+			  }
+			}
+			<!-- Opens the collapible upon click -->
+			const colls = document.getElementsByClassName('collapsible');
+			for (const coll of colls) {
+			  coll.addEventListener('click', function() {
+				if (!this.classList.contains('active')) {
+				  collapseAllOpenContent();
+				}
+				this.classList.toggle('active');
+				toggleContent(this.nextElementSibling);
+			  });
+			}
+			<!-- Automatically opens one collapsible as the website opens -->
+			document.querySelector('.collapsible').click();
+		</script>
+	</body>
+
+</html>
